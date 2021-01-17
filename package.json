@@ -1,0 +1,6 @@
+{
+    "name":"flutter",
+    "scripts":{
+        "run":"flutter run"
+    }
+}
