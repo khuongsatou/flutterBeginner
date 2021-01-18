@@ -11,25 +11,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePageState createState() => MyHomePageState();
-}
-
-class MyHomePageState extends State<MyHomePage> {
-  int counter = 0;
-
+class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-            child: Text(
-                'Tui là 1 widget Text. Data của tui hiện tại là $counter')),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              counter++;
-            });
-          },
-          child: Icon(Icons.add),
-        ));
+            child: Builder(
+                builder: (context) => FlatButton(
+                    child: Text('show snackbar'),
+                    color: Colors.pink,
+                    onPressed: () {
+                      final snackBar = SnackBar(
+                          content: Text(
+                              'Không thể truy cập bài viết vì không có vote'));
+                      Scaffold.of(context).showSnackBar(snackBar);
+                    }))));
   }
 }
