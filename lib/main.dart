@@ -1,29 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_form_app/SignIn.dart';
 
-void main() {
-  runApp(MyApp());
-}
+//Photo by Cagatay Orhan on Unsplash
+
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyHomePage());
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-            child: Builder(
-                builder: (context) => FlatButton(
-                    child: Text('show snackbar'),
-                    color: Colors.pink,
-                    onPressed: () {
-                      final snackBar = SnackBar(
-                          content: Text(
-                              'Không thể truy cập bài viết vì không có vote'));
-                      Scaffold.of(context).showSnackBar(snackBar);
-                    }))));
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
+      home: SignInPage(title: 'Flutter Demo Home Page'),
+    );
   }
 }
