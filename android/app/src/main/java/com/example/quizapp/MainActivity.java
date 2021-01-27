@@ -1,4 +1,4 @@
-package com.example.flutter_login_form_app;
+package com.example.quizapp;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

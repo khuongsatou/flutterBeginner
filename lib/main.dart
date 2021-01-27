@@ -1,19 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_form_app/SignIn.dart';
+import 'package:quizapp/widgets/quiz/QuizScreen.dart';
 
-//Photo by Cagatay Orhan on Unsplash
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
-      home: SignInPage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
+void main() => runApp(QuizScreen());
